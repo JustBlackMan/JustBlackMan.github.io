@@ -1,0 +1,61 @@
+body{
+    background: #000000;  /* fallback for old browsers */ 
+    background: -webkit-linear-gradient(to right, #306ee9, #a9c3f7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #306ee9, #a9c3f7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+#titulo{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#htitulo {
+    color: black;
+    margin: 0;
+    padding-bottom: 1%;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 200%;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+  }
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 30px #ff1d1d;
+    }
+    to {
+      text-shadow: 0 0 400px #ff1d1d, 0 0 20px #ff1d1d;
+    }
+  }
+
+#gifs{
+    text-align: center;
+    padding-top: 10%;
+}
+
+#doggif{
+    border-radius: 50px;
+    border: 5px solid #000000;
+    
+}
+
+
+
+
+#credits{
+    text-align: right;
+    padding-top: 10%;
+}
+
+#credits h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100%;
+    text-align:center;
+}
