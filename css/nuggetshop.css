@@ -1,8 +1,8 @@
 body{
-    background: #000000;  /* fallback for old browsers */ 
-    background: -webkit-linear-gradient(to right, #ff00d4, #f7004a);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ff00d4, #f7004a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: rgb(255,0,150);  
+    background: -webkit-linear-gradient(90deg, rgba(255,0,249,1) 0%, rgba(255,0,150,1) 50%, rgba(255,0,253,1) 100%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient(circle, rgba(255,0,150,1) 0%, rgba(255,0,200,1) 50%, rgba(255,0,250,1) 100%);
+    
 }
 
 
@@ -46,11 +46,27 @@ body{
     height: 120px;
     width: 300px;
     border-radius: 50px;
-    border: 5px solid #000000;
+    border: 2.5px solid #000000;
     
 }
 
+#dis{
+  text-align: right;
+  padding-top: 3%;
+}
 
+#dis a{
+  text-decoration: none;
+  
+}
+
+#dis h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 100%;
+  text-align:center;
+  color: #000000;
+  
+}
 
 
 #credits{
