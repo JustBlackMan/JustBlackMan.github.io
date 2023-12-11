@@ -1,10 +1,7 @@
 body{
-    background: rgb(255,0,150);  
-    background: -webkit-linear-gradient(90deg, rgba(255,0,249,1) 0%, rgba(255,0,150,1) 50%, rgba(255,0,253,1) 100%);  /* Chrome 10-25, Safari 5.1-6 */
-    background: radial-gradient(circle, rgba(255,0,150,1) 0%, rgba(255,0,200,1) 50%, rgba(255,0,250,1) 100%);
-    
-}
+    background: rgb(0, 0, 0);  
 
+}
 
 #titulo{
     text-align: center;
@@ -22,51 +19,41 @@ body{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 200%;
     text-transform: uppercase;
-    animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
     text-align: center;
   }
 
 @keyframes glow {
     from {
-      text-shadow: 0 0 30px #ff1d1d;
+      text-shadow: 0 0 30px #ec00f9;
     }
     to {
-      text-shadow: 0 0 400px #ff1db4, 0 0 20px #ff1db4;
+      text-shadow: 0 0 400px rgb(0, 0, 0), 0 0 20px #ec00f9;
     }
   }
 
-#gifs{
-    height: auto;
-    width: auto;
-    text-align: center;
-    padding-top: 10%;
-}
 
-#doggif{
-    height: 120px;
-    width: 300px;
-    border-radius: 50px;
-    border: 2.5px solid #000000;
-    
-}
+.orbe {
+  animation:spin 3s linear infinite;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 140px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 60px violet,
+    inset -20px 0 60px blue,
+    inset 20px 0 300px violet,
+    inset -20px 0 300px blue,
+      0 0 50px #e400f9,
+      -10px 0 60px violet,
+      10px 0 60px blue;
+    }
 
-#dis{
-  text-align: right;
-  padding-top: 3%;
-}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-#dis a{
-  text-decoration: none;
-  
-}
 
-#dis h1{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 100%;
-  text-align:center;
-  color: #000000;
-  
-}
 
 
 #credits{
@@ -75,8 +62,8 @@ body{
 }
 
 #credits h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:  'Arial Narrow Bold', sans-serif, impact;
     font-size: 100%;
     text-align:center;
-    color: #000000;
+    color: #ffffff80;
 }
