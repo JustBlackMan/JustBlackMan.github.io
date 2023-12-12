@@ -35,8 +35,8 @@ body{
 
 .orbe {
   animation:spin 3s linear infinite;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: auto;
   margin-top: 140px;
   border-radius: 50%;
