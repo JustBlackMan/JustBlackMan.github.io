@@ -40,12 +40,13 @@ body{
   height:350;
   width:190;
 }
-#img3{
+#imgs #img3{
   border-radius: 15px;
   height:310;
   width:190
+
 }
-#img4{
+#imgs #img4{
   border-radius:15px;
   height:310;
   width:190;
