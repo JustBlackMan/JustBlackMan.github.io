@@ -40,7 +40,16 @@ body{
   height:350;
   width:190;
 }
-
+#img3{
+  border-radius: 15px;
+  height:310;
+  width:190
+}
+#img4{
+  border-radius:15px;
+  height:310;
+  width:190;
+}
 
 .orbe {
   animation:spin 3s linear infinite;
