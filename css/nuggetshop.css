@@ -5,7 +5,6 @@ body{
 
 
 
-
 #titulo{
     text-align: center;
     padding: 10px;
@@ -34,6 +33,13 @@ body{
       text-shadow: 0 0 400px rgb(0, 0, 0), 0 0 20px #ec00f9;
     }
   }
+
+
+img{
+  border-radius:10px;
+  height:350;
+  width:190;
+}
 
 
 .orbe {
