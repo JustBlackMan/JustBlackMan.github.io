@@ -35,7 +35,8 @@ body{
   }
 
 #textt{
-  font-family:Verdana, Geneva, Tahoma, sans-serift
+  font-family:Verdana, Geneva, Tahoma, sans-serift;
+  text-aling:center;
 }
 
 #imgs img{
