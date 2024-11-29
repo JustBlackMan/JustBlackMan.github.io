@@ -50,12 +50,10 @@ body{
 
 }
 
-#cont{
-    text-aling: center;
-    
-}
 
 #img{
+  display: block;
+  Margin: 0 auto;
   text-aling: center;
   border-radius:15px;
   height:350;
