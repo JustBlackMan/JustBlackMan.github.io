@@ -59,7 +59,7 @@ body{
 	
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 .galeria li {
@@ -67,8 +67,9 @@ body{
 }
 
 .galeria img {
-	width: 150px;
+	width: auto;
 	height: 100px;
+  border-radius:10px;
 }
 
 /*Estilos del modal*/
