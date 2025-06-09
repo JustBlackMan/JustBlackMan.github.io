@@ -91,6 +91,7 @@ body{
 .modal h3 {
 	color: #fff;
 	font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 	text-align: center;
 	margin: 15px 0;
 }
@@ -106,7 +107,8 @@ body{
 
 .imagen a {
 	color: #fff;
-	font-size: 40px;
+	font-size: 30px;
+  font-family: sans-serif;
 	text-decoration: none;
 	margin: 0 10px;
 }
@@ -123,6 +125,7 @@ body{
 	max-width: 100%;
 	border: 7px solid #fff;
 	box-sizing: border-box;
+  border-radius: 35px;
 }
 
 .cerrar {
