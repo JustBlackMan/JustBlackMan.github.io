@@ -3,7 +3,7 @@ body{
     background: linear-gradient(#4A148C,#D500F9,#651FFF)
 }
 
-*{
+.alll{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -90,7 +90,7 @@ body{
   flex: 2;
   cursor: pointer;
   border-radius: 8px;
-  
+
 }
 
 
