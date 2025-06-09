@@ -118,7 +118,7 @@ body{
 }
 
 .imagen img {
-	width: 500px;
+	width: auto;
 	height: 100%;
 	max-width: 100%;
 	border: 7px solid #fff;
