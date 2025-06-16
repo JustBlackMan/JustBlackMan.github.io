@@ -9,63 +9,40 @@
 
 
     <body>
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
         <div id="titulo">
             <h1 id="htitulo"> Eres lo mas bonito del universo </h1>
         </div>
 
-        <ul class="galeria">
-            <li><a href="#img1"><img src="imagenes/img1.jpg"></a></li>
-            <li><a href="#img2"><img src="imagenes/img5.jpg"></a></li>
-            <li><a href="#img3"><img src="imagenes/img3.jpg"></a></li>
-            <li><a href="#img4"><img src="imagenes/img4.jpg"></a></li>
-        </ul>
 
-        <div class="modal" id="img1">
-            <h3>t amo</h3>
-            <div class="imagen">
-                <a href="#img4">&#60;</a>
-                <a href="#img2"><img src="imagenes/img1.jpg"></a>
-                <a href="#img2">></a>
+        <div id="nueva-galeria-container">
+           
+            <div class="nueva-galeria">
+                <img src="imagenes/img1.jpg" alt="Imagen 1" class="zoomable">
+                <img src="imagenes/img2.jpg" alt="Imagen 2" class="zoomable">
+                <img src="imagenes/img3.jpg" alt="Imagen 3" class="zoomable">
+                <img src="imagenes/img4.jpg" alt="Imagen 4" class="zoomable">
+                <img src="imagenes/img5.jpg" alt="Imagen 5" class="zoomable">
+                <img src="imagenes/img6.jpg" alt="Imagen 6" class="zoomable">
+                <img src="imagenes/img7.jpg" alt="Imagen 7" class="zoomable">
+                <img src="imagenes/img8.jpg" alt="Imagen 8" class="zoomable">
+                <img src="imagenes/img9.jpg" alt="Imagen 9" class="zoomable">
+                <img src="imagenes/img10.jpg" alt="Imagen 10" class="zoomable">
+                <img src="imagenes/img11.jpg" alt="Imagen 11" class="zoomable">
+                <img src="imagenes/img12.jpg" alt="Imagen 12" class="zoomable">
+                <img src="imagenes/img13.webp" alt="Imagen 13" class="zoomable">
             </div>
-            <a class="cerrar" href="">X</a>
-        </div>
-	
-        <div class="modal" id="img2">
-            <h3>t amo</h3>
-            <div class="imagen">
-                <a href="#img1">&#60;</a>
-                <a href="#img3"><img src="imagenes/img5.jpg"></a>
-                <a href="#img3">></a>
-            </div>
-            <a class="cerrar" href="">X</a>
-        </div>
-	
-        <div class="modal" id="img3">
-            <h3>t amo</h3>
-            <div class="imagen">
-                <a href="#img2">&#60;</a>
-                <a href="#img4"><img src="imagenes/img3.jpg"></a>
-                <a href="#img4">></a>
-            </div>
-            <a class="cerrar" href="">X</a>
-        </div>
-	
-        <div class="modal" id="img4">
-            <h3>t amo</h3>
-            <div class="imagen">
-                <a href="#img3">&#60;</a>
-                <a href="#img1"><img src="imagenes/img4.jpg"></a>
-                <a href="#img1">></a>
-            </div>
-            <a class="cerrar" href="">X</a>
         </div>
 
-
-
-        
-        
-        
-
+        <!-- Modal para ver imagen grande -->
+        <div id="modal-img" class="modal-img">
+            <span class="close-modal">&times;</span>
+            <span class="slider-arrow left-arrow">&#60;</span>
+            <img class="modal-content-img" id="img-modal-grande">
+            <span class="slider-arrow right-arrow">&#62;</span>
+        </div>
 
 
         <div id="credits">
@@ -75,9 +52,58 @@
 
     </body>
 
+    <script>
+    // Modal para galería alternativa con slider
+    const modal = document.getElementById('modal-img');
+    const modalImg = document.getElementById('img-modal-grande');
+    const closeModal = document.querySelector('.close-modal');
+    const images = Array.from(document.querySelectorAll('.nueva-galeria .zoomable'));
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    let currentIndex = 0;
 
+    function showImage(index) {
+        if (index < 0) index = images.length - 1;
+        if (index >= images.length) index = 0;
+        currentIndex = index;
+        modalImg.src = images[currentIndex].src;
+        modalImg.alt = images[currentIndex].alt;
+    }
 
+    images.forEach((img, idx) => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            showImage(idx);
+        });
+    });
 
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
 
+    leftArrow.onclick = function(e) {
+        e.stopPropagation();
+        showImage(currentIndex - 1);
+    }
+
+    rightArrow.onclick = function(e) {
+        e.stopPropagation();
+        showImage(currentIndex + 1);
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (modal.style.display === 'block') {
+            if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+            if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+            if (e.key === 'Escape') modal.style.display = 'none';
+        }
+    });
+    </script>
 
 </html>
