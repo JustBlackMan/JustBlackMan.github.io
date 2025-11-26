@@ -92,11 +92,39 @@ body {
     line-height: 1.4; /* Espaciado entre líneas */
 }
 
+.video-container {
+    /* Define la posición relativa para que los elementos hijos se posicionen respecto a él */
+    position: relative; 
+    
+    /* El truco mágico: define la altura usando el padding-bottom para la relación 16:9 (9/16 = 0.5625) */
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    
+    /* Margen para separarlo de otros elementos y asegurar que no desborde */
+    margin: 30px auto; 
+    max-width: 100%; 
+    
+    /* Ajusta el ancho para que el video no sea demasiado grande en pantallas amplias */
+    width: 600px; 
+}
 
+.video-container iframe {
+    /* Posiciona el iframe de forma absoluta para que cubra todo el 'padding' */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-
-
-
+/* Opcional: Centrar el contenedor del video si el width es menor a 100% */
+@media (min-width: 601px) {
+    .video-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 
