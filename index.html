@@ -9,92 +9,18 @@
 
     <body>
         <div id="titulo">
-            <h1 id="htitulo"> Eres lo mas bonito del universo </h1>
+            <h1 id="htitulo"> :) </h1>
         </div>
 
-        <div id="nueva-galeria-container">
-            <div class="nueva-galeria">
-                <img src="imagenes/img1.jpg" alt="Imagen 1" class="zoomable">
-                <img src="imagenes/img2.jpg" alt="Imagen 2" class="zoomable">
-                <img src="imagenes/img3.jpg" alt="Imagen 3" class="zoomable">
-                <img src="imagenes/img4.jpg" alt="Imagen 4" class="zoomable">
-                <img src="imagenes/img5.jpg" alt="Imagen 5" class="zoomable">
-                <img src="imagenes/img6.jpg" alt="Imagen 6" class="zoomable">
-                <img src="imagenes/img7.jpg" alt="Imagen 7" class="zoomable">
-                <img src="imagenes/img8.jpg" alt="Imagen 8" class="zoomable">
-                <img src="imagenes/img9.jpg" alt="Imagen 9" class="zoomable">
-                <img src="imagenes/img10.jpg" alt="Imagen 10" class="zoomable">
-                <img src="imagenes/img11.jpg" alt="Imagen 11" class="zoomable">
-                <img src="imagenes/img12.jpg" alt="Imagen 12" class="zoomable">
-                <img src="imagenes/img13.webp" alt="Imagen 13" class="zoomable">
-            </div>
-        </div>
+        
 
-        <!-- Modal para ver imagen grande -->
-        <div id="modal-img" class="modal-img">
-            <span class="close-modal">&times;</span>
-            <span class="slider-arrow left-arrow">&#60;</span>
-            <img class="modal-content-img" id="img-modal-grande">
-            <span class="slider-arrow right-arrow">&#62;</span>
-        </div>
+        
 
         <div id="credits">
             <h1>By Nugget</h1>
         </div>
     </body>
 
-    <script>
-    // Modal para galería alternativa con slider
-    const modal = document.getElementById('modal-img');
-    const modalImg = document.getElementById('img-modal-grande');
-    const closeModal = document.querySelector('.close-modal');
-    const images = Array.from(document.querySelectorAll('.nueva-galeria .zoomable'));
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    let currentIndex = 0;
-
-    function showImage(index) {
-        if (index < 0) index = images.length - 1;
-        if (index >= images.length) index = 0;
-        currentIndex = index;
-        modalImg.src = images[currentIndex].src;
-        modalImg.alt = images[currentIndex].alt;
-    }
-
-    images.forEach((img, idx) => {
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            showImage(idx);
-        });
-    });
-
-    closeModal.onclick = function() {
-        modal.style.display = 'none';
-    }
-
-    leftArrow.onclick = function(e) {
-        e.stopPropagation();
-        showImage(currentIndex - 1);
-    }
-
-    rightArrow.onclick = function(e) {
-        e.stopPropagation();
-        showImage(currentIndex + 1);
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    }
-
-    document.addEventListener('keydown', function(e) {
-        if (modal.style.display === 'block') {
-            if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
-            if (e.key === 'ArrowRight') showImage(currentIndex + 1);
-            if (e.key === 'Escape') modal.style.display = 'none';
-        }
-    });
-    </script>
+    
 
 </html>
