@@ -1,5 +1,4 @@
 body {
-    /* Fondo animado tipo espacio con estrellas */
     background: #0a0026;
     min-height: 100vh;
     overflow-x: hidden;
@@ -74,7 +73,23 @@ body {
     color: #ffffff80;
 }
 
+/* 4. 🚀 ESTILO PARA EL TEXTO GRANDE Y CENTRAL 🚀 */
+#cuerpo-principal {
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 50px auto; /* Centra el div horizontalmente y da margen arriba/abajo */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra el texto dentro del div */
+}
 
+#cuerpo-principal p {
+    font-size: 2.5em; /* Tamaño de fuente MUY grande */
+    color: #ff4500; /* Color naranja/rojo para que resalte */
+    font-weight: bold; /* Texto en negrita */
+    line-height: 1.4; /* Espaciado entre líneas */
+}
 
 
 
