@@ -78,7 +78,8 @@ body {
     max-width: 800px; /* Limita el ancho del texto */
     margin: 50px auto; /* Centra el div horizontalmente y da margen arriba/abajo */
     padding: 20px;
-    background-color: white;
+    background-color: gray;
+    opacity:60%;
     border-radius: 10px; /* Esquinas redondeadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     text-align: center; /* Centra el texto dentro del div */
