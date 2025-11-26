@@ -86,7 +86,7 @@ body {
 }
 
 #cuerpo-principal p {
-    font-size: 10px; /* Tamaño de fuente MUY grande */
+    font-size: 18px; /* Tamaño de fuente MUY grande */
     color: black; /* Color naranja/rojo para que resalte */
     font-weight: bold; /* Texto en negrita */
     line-height: 1.4; /* Espaciado entre líneas */
