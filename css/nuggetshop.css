@@ -14,8 +14,9 @@ body {
 .boton-navegacion {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #f39c12; /* Un color naranja "nugget" */
+    background-color: black; /* Un color naranja "nugget" */
     color: white;
+    opacity: 70%;
     text-decoration: none; /* Quita el subrayado */
     border-radius: 5px;
     font-family: Arial, sans-serif;
