@@ -25,7 +25,8 @@ body {
 }
 
 .boton-navegacion:hover {
-    background-color: #e67e22; /* Cambia de color al pasar el mouse */
+    background-color: black; /* Cambia de color al pasar el mouse */
+    opacity:30%;
 }
 
 
